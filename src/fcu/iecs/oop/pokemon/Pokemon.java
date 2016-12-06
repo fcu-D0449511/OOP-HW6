@@ -3,13 +3,13 @@ package fcu.iecs.oop.pokemon;
 public class Pokemon {
 
 	private String name = null;
-	public int cp=0;
-	
-	public Pokemon(String a , int b)
+	private int cp=0;
+	private PokemonType type;
+	public Pokemon(String a ,PokemonType c, int b )
 	{
-		getname();
-		getcp();
-		setcp(b);
+		this.name=a;
+		this.cp=b;
+		this.type=c;
 	}
 	public String getname()
 	{
@@ -19,10 +19,12 @@ public class Pokemon {
 	{
 		return cp;
 	}
-	public void setcp(int num)
+	public void setcp(int cp)
 	{
-		if(num>=0)
-			cp=num;
+		this.cp = cp;
 	}
-	
+	public PokemonType gettype()
+	{
+		return type;
+	}
 }
